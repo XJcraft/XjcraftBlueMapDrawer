@@ -17,7 +17,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-import static org.xjcraft.senkosan.bluemap.enums.MarkerType.*;
+import static org.xjcraft.senkosan.bluemap.enums.MarkerType.BASE;
+import static org.xjcraft.senkosan.bluemap.enums.MarkerType.HOME;
 
 /**
  * 标点管理器
@@ -47,7 +48,7 @@ public abstract class AbstractMarkerManager {
             Bukkit.getPluginManager().disablePlugin(XJCraftBaseHomeBlueMapDrawer.getInstance());
             return new XBMPluginException("未能正确获取BlueMap相关API，请检查是否正确加载了BlueMap插件");
         });
-        this.mapToRender = mapApi.getMap("world").orElseThrow(() -> {
+        this.mapToRender = mapApi.getMap("mainland").orElseThrow(() -> {
             Bukkit.getPluginManager().disablePlugin(XJCraftBaseHomeBlueMapDrawer.getInstance());
             return new XBMPluginException("未能正确获取BlueMap地图，请检查是否正确加载了BlueMap插件");
         });

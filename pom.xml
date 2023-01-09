@@ -28,22 +28,22 @@
                     <target>9</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-shade-plugin</artifactId>-->
+            <!--                <version>3.2.4</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>shade</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <createDependencyReducedPom>false</createDependencyReducedPom>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
         </plugins>
         <resources>
             <resource>
@@ -54,10 +54,10 @@
     </build>
 
     <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
+        <!--        <repository>-->
+        <!--            <id>jitpack.io</id>-->
+        <!--            <url>https://jitpack.io</url>-->
+        <!--        </repository>-->
         <repository>
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
@@ -70,10 +70,22 @@
 
     <dependencies>
 
-<!--        BlueMap Api: v2.1.1-->
-<!--        XJCraftAudit: v1.4.4-->
-
-<!--        Spigot Api: 1.18-->
+        <!--        BlueMap Api: v2.1.1-->
+        <dependency>
+            <groupId>com.github.BlueMap-Minecraft</groupId>
+            <artifactId>BlueMapAPI</artifactId>
+            <version>v2.1.1</version>
+            <scope>system</scope>
+            <systemPath>M:/Minecraft/Servers/spigot-sync/plugins/BlueMap-3.6-spigot.jar</systemPath>
+        </dependency>
+        <!--        XJCraftAudit: v1.4.4-->
+        <dependency>
+            <groupId>org.jim</groupId>
+            <artifactId>XJCraftAudit</artifactId>
+            <version>1.4.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--        Spigot Api: 1.18-->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
