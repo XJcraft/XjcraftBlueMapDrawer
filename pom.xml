@@ -76,7 +76,7 @@
             <artifactId>BlueMapAPI</artifactId>
             <version>v2.1.1</version>
             <scope>system</scope>
-            <systemPath>M:/Minecraft/Servers/spigot-sync/plugins/BlueMap-3.6-spigot.jar</systemPath>
+            <systemPath>M:/Minecraft/Servers/spigot-sync/plugins/BlueMap-3.9-spigot.jar</systemPath>
         </dependency>
         <!--        XJCraftAudit: v1.4.4-->
         <dependency>
