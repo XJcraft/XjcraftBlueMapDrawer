@@ -19,7 +19,8 @@ import java.util.Optional;
 import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
-import static org.xjcraft.senkosan.bluemap.manager.config.SenkoBlueMapConfig.*;
+import static org.xjcraft.senkosan.bluemap.manager.config.SenkoBlueMapConfig.DEFAULT_VALUE;
+import static org.xjcraft.senkosan.bluemap.manager.config.SenkoBlueMapConfig.KEY;
 import static org.xjcraft.senkosan.bluemap.manager.config.SenkoBlueMapConfig.KEY.DEBUG_MODE;
 
 /**
@@ -45,7 +46,7 @@ public abstract class ConfigurableBlueMapManager extends AbstractMarkerManager {
     // 服务器地图名称
     private String serverMapName;
     // 开启在线玩家渲染
-    private boolean enableOnlinePlayerRender = true;
+    private boolean enableOnlinePlayerRender = false;
 
     public ConfigurableBlueMapManager() {
         this.applyHelper = AuditPlugin.getPlugin()
